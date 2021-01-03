@@ -1,0 +1,21 @@
+program wyw;
+var a,b,c;
+procedure add(x,y);
+	const d:=20;
+	var m;
+	procedure minus(mm,n);
+		begin
+			b:=b-n;
+		end
+	begin
+		read(m);
+		call minus(0,m);
+		a:=a+m;
+	end
+begin
+	read(a);
+	read(b);
+	call add(0,0);
+	write(a);
+	write(b);
+end

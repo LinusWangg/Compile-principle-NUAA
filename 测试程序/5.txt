@@ -1,0 +1,27 @@
+program wyw;
+const a:=20,b:=10;
+var c,d,e,flag;
+procedure wywnb(x);
+	var sum;
+	begin
+		sum:=0;
+		while x>=0 do
+		begin
+			if odd x then
+				sum:=sum+x
+			else
+				sum:=sum-x;
+			x:=x-1
+		end;
+		flag:=sum
+	end
+begin
+	read(c);
+	d:=1;
+	while d<=c do
+	begin
+		call wywnb(d);
+		write(flag);
+		d:=d+1
+	end
+end

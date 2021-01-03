@@ -1,0 +1,155 @@
+program fibonacci;
+program:program
+identity:fibonacci
+semicolon: ;
+-------------------------------------
+var index,return,i;
+var:var
+identity:index
+comma: ,
+identity:return
+comma: ,
+identity:i
+semicolon: ;
+-------------------------------------
+procedure fib(x);
+procedure:procedure
+identity:fib
+leftbrackets: (
+identity:x
+rightbrackets: )
+semicolon: ;
+-------------------------------------
+var sum;
+var:var
+identity:sum
+semicolon: ;
+-------------------------------------
+begin
+begin:begin
+-------------------------------------
+	sum:=0;
+identity:sum
+Assign: :=
+num:0
+semicolon: ;
+-------------------------------------
+	if x<2 then
+if:if
+identity:x
+less: <
+num:2
+then:then
+-------------------------------------
+		return:=x
+identity:return
+Assign: :=
+identity:x
+-------------------------------------
+	else
+else:else
+-------------------------------------
+	begin
+begin:begin
+-------------------------------------
+		call fib(x-1);
+call:call
+identity:fib
+leftbrackets: (
+identity:x
+Minus: -
+num:1
+rightbrackets: )
+semicolon: ;
+-------------------------------------
+		sum:=sum+return;
+identity:sum
+Assign: :=
+identity:sum
+Plus: +
+identity:return
+semicolon: ;
+-------------------------------------
+		call fib(x-2);
+call:call
+identity:fib
+leftbrackets: (
+identity:x
+Minus: -
+num:2
+rightbrackets: )
+semicolon: ;
+-------------------------------------
+		sum:=sum+return;
+identity:sum
+Assign: :=
+identity:sum
+Plus: +
+identity:return
+semicolon: ;
+-------------------------------------
+		return:=sum
+identity:return
+Assign: :=
+identity:sum
+-------------------------------------
+	end
+end:end
+-------------------------------------
+end
+end:end
+-------------------------------------
+begin
+begin:begin
+-------------------------------------
+	read(index);
+read:read
+leftbrackets: (
+identity:index
+rightbrackets: )
+semicolon: ;
+-------------------------------------
+	i:=1;
+identity:i
+Assign: :=
+num:1
+semicolon: ;
+-------------------------------------
+	while i<=index do
+while:while
+identity:i
+Notmore: <=
+identity:index
+do:do
+-------------------------------------
+	begin
+begin:begin
+-------------------------------------
+		call fib(i);
+call:call
+identity:fib
+leftbrackets: (
+identity:i
+rightbrackets: )
+semicolon: ;
+-------------------------------------
+		write(return);
+write:write
+leftbrackets: (
+identity:return
+rightbrackets: )
+semicolon: ;
+-------------------------------------
+		i:=i+1
+identity:i
+Assign: :=
+identity:i
+Plus: +
+num:1
+-------------------------------------
+	end
+end:end
+-------------------------------------
+end
+end:end
+-------------------------------------
